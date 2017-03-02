@@ -1,0 +1,24 @@
+﻿  main.cpp
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(130): warning C4005: 'APIENTRY': redefinición de macro
+  c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\../include/glfw3.h(98): note: vea la definición anterior de 'APIENTRY'
+main.cpp(67): warning C4305: '=': truncamiento de 'double' a 'float'
+main.cpp(210): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+main.cpp(211): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+main.cpp(248): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+main.cpp(249): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+main.cpp(250): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+main.cpp(251): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+main.cpp(253): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+SOIL.lib(SOIL.obj) : warning LNK4075: se omite '/EDITANDCONTINUE' debido a la especificación '/OPT:ICF'
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRTD' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+  Generando código
+  2 of 698 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+SOIL.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB 'vc110.pdb' con 'SOIL.lib(image_DXT.obj)' o en 'C:\Users\Ricky\documents\visual studio 2015\Projects\Plantilla_Grafica\Release\vc110.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+SOIL.lib(image_helper.obj) : warning LNK4099: no se encontró PDB 'vc110.pdb' con 'SOIL.lib(image_helper.obj)' o en 'C:\Users\Ricky\documents\visual studio 2015\Projects\Plantilla_Grafica\Release\vc110.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+SOIL.lib(SOIL.obj) : warning LNK4099: no se encontró PDB 'vc110.pdb' con 'SOIL.lib(SOIL.obj)' o en 'C:\Users\Ricky\documents\visual studio 2015\Projects\Plantilla_Grafica\Release\vc110.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+SOIL.lib(stb_image_aug.obj) : warning LNK4099: no se encontró PDB 'vc110.pdb' con 'SOIL.lib(stb_image_aug.obj)' o en 'C:\Users\Ricky\documents\visual studio 2015\Projects\Plantilla_Grafica\Release\vc110.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+  Plantilla_Grafica.vcxproj -> C:\Users\Ricky\documents\visual studio 2015\Projects\Plantilla_Grafica\Release\Plantilla_Grafica.exe
+  Plantilla_Grafica.vcxproj -> C:\Users\Ricky\documents\visual studio 2015\Projects\Plantilla_Grafica\Release\Plantilla_Grafica.pdb (Full PDB)

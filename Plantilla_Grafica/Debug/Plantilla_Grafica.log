@@ -1,0 +1,17 @@
+﻿  main.cpp
+c:\program files (x86)\windows kits\8.1\include\shared\minwindef.h(130): warning C4005: 'APIENTRY': redefinición de macro
+  c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\include\glfw3.h(98): note: vea la definición anterior de 'APIENTRY'
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(167): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(291): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(292): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(342): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(343): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(344): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(345): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(347): warning C4305: 'inicializando': truncamiento de 'double' a 'GLfloat'
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(553): warning C4018: '<': no coinciden signed/unsigned
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(803): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(854): warning C4018: '<': no coinciden signed/unsigned
+c:\users\ricky\documents\visual studio 2015\projects\plantilla_grafica\plantilla_grafica\main.cpp(1143): warning C4018: '<': no coinciden signed/unsigned
+  Plantilla_Grafica.vcxproj -> C:\Users\Ricky\documents\visual studio 2015\Projects\Plantilla_Grafica\Debug\Plantilla_Grafica.exe
+  Plantilla_Grafica.vcxproj -> C:\Users\Ricky\documents\visual studio 2015\Projects\Plantilla_Grafica\Debug\Plantilla_Grafica.pdb (Partial PDB)
