@@ -53,7 +53,8 @@ glm::vec4 Model::getCenter() {
 
 glm::vec4 Model::getCenter_2()
 {
-	return ((this->min_aux + this->max_aux) / 2.0f);
+	return glm::vec4(this->transformation->getTraslationMatrix()[3][0], this->transformation->getTraslationMatrix()[3][1], this->transformation->getTraslationMatrix()[3][2], 1.0f);
+	//return ((this->min_aux + this->max_aux) / 2.0f);
 }
 
 void Model::render(GLuint shader_id) {
@@ -61,8 +62,8 @@ void Model::render(GLuint shader_id) {
 	//cout << min[0] << "," << min[1] << min[2] << endl;
 	//this->transformation->addTraslationMatrix(4.0f, 5.0f, 6.0f);
 
-	min_aux = glm::normalize(this->transformation->getTransformMatrix() * min);
-	max_aux = glm::normalize(this->transformation->getTransformMatrix() * max);
+	min_aux = glm::normalize(this->transformation->getTraslationMatrix() * min);
+	max_aux = glm::normalize(this->transformation->getTraslationMatrix() * max);
 
 	//cout << min_aux[0] << "," << min_aux[1] << ","<< min_aux[2] << endl;
 

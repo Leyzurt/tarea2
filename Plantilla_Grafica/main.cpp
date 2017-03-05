@@ -21,13 +21,13 @@ TwType difuseType;
 	float TranslationSpeedX, TranslationSpeedY, TranslationSpeedZ;
 	float TranslationSpeedX_Light, TranslationSpeedY_Light, TranslationSpeedZ_Light;
 	float Scale, Rotation[4];
-	float g_LightDirection[] = { -0.90f, -0.11f, -0.44f };
+	float g_LightDirection[] = { 0.02f, -0.83f, -0.57f };
 	float refract = 1.0f;
 	float lightAmbientIntensity[3], lightDiffuseIntensity[3], lightSpecularIntensity[3];
 	float matAmbientReflectances[3], matDiffuseReflectances[3], matSpecularReflectances[3], matShininess;
 	float roughness, fresnel, albedo, interpolacion, texture_active;
 	float atConstant, atLineal, atCuadratic, exponent, spotcos;
-	float Ldirect = 1.0f, Lpoint=0.0f, Lspot=0.0f;
+	float Ldirect = 0.0f, Lpoint=0.0f, Lspot=1.0f;
 	bool luces_on;	
 	int entitieSelected = 1;
 	bool animacion_on = true;
@@ -158,7 +158,7 @@ TwType difuseType;
 		atLineal = 0.1f;
 		atCuadratic = 0.1f;
 		exponent = 0.1f;
-		spotcos = 0.4f;
+		spotcos = 0.9f;
 
 		TranslationSpeedX_Light = 2.4f;
 		TranslationSpeedY_Light = 15.0f;
@@ -521,20 +521,25 @@ TwType difuseType;
 
 	void display_shadow() {
 		mat4 aux;
+		mat4 proy;
+		GLfloat near_plane = -20.0f, far_plane = 50.0f;
+		vec3 LuzCentro = vec3(entidades[0]->getCenter_2());
+		vec3 Dir = entidades[0]->material->getDir();
 		if (shadowMap) {
-			aux = glm::lookAt(vec3(entidades[0]->getCenter_2()),
-				//glm::vec3(0.0f, 0.0f, 10.0f),
-				entidades[0]->material->getDir(),
-				glm::vec3(0.0f, 1.0f, 0.0f));
+			//aux = glm::lookAt(vec3(entidades[0]->getCenter_2()), entidades[0]->material->getDir(),	glm::vec3(0.0f, 1.0f, 0.0f));
+			aux = glm::lookAt(LuzCentro, LuzCentro  + Dir , glm::vec3(0.0f, 1.0f, 0.0f));
+			//proy = glm::perspective<float>(45.0f, 1.0f, 2.0f, 50.0f);
 		}
 		else {
 			aux = glm::lookAt(vec3(entidades[0]->getCenter_2()),
 				//glm::vec3(0.0f, 0.0f, 10.0f),
 				glm::vec3(0.0f, -1.0f, 0.0f),
 				glm::vec3(0.0f, 1.0f, 0.0f));
+			
+			
 		}
-		GLfloat near_plane = -20.0f, far_plane = 50.0f;
-		mat4 proy = glm::ortho(15.0f, -15.0f, -15.0f, 15.0f, near_plane, far_plane);
+		proy = glm::ortho(15.0f, -15.0f, -15.0f, 15.0f, near_plane, far_plane);
+		
 
 		glm::mat4 biasMatrix(
 			0.5, 0.0, 0.0, 0.0,
@@ -554,6 +559,7 @@ TwType difuseType;
 		{
 			entidades[i]->render_shadow(shader_id);
 		}
+
 	}
 
 	void RenderDepthTexture() {

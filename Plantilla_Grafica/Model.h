@@ -72,7 +72,7 @@ public:
 	void agregarFace(vector<string> Faces);
 	void Max_min();
 	void render(GLuint shader_id);
-
+	
 	/*Getters*/
 	float getActiveReflect();
 	GLuint getTextureCube();
