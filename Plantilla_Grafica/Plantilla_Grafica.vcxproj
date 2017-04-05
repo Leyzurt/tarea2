@@ -22,6 +22,7 @@
     <ProjectGuid>{7F74DF96-3161-4FB5-8C5C-0A70EAA15EEB}</ProjectGuid>
     <RootNamespace>Plantilla_Grafica</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>Proyecto_extremo</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -75,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>assimp-vc140-mt.lib;SOIL.lib;opengl32.lib;freeglut.lib;glfw3.lib;AntTweakBar.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -96,6 +98,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -119,31 +122,33 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="FrameBuffer.cpp" />
     <ClCompile Include="GLSLProgram.cpp" />
-    <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Model.cpp" />
-    <ClCompile Include="Skybox.cpp" />
+    <ClCompile Include="Points.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TransferFunc.cpp" />
     <ClCompile Include="Transformation.cpp" />
+    <ClCompile Include="VolumeRender.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
-    <ClInclude Include="FrameBuffer.h" />
     <ClInclude Include="GLSLProgram.h" />
-    <ClInclude Include="Light.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="Model.h" />
-    <ClInclude Include="Skybox.h" />
+    <ClInclude Include="Points.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="TransferFunc.h" />
     <ClInclude Include="Transformation.h" />
+    <ClInclude Include="VolumeRender.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\shaders\backface.frag" />
+    <None Include="..\shaders\backface.vert" />
     <None Include="..\shaders\shader_fragment.frag" />
     <None Include="..\shaders\shader_fragment.vert" />
     <None Include="..\shaders\shader_vertex.frag" />
     <None Include="..\shaders\shader_vertex.vert" />
+    <None Include="..\shaders\shader_volume.frag" />
+    <None Include="..\shaders\shader_volume.vert" />
     <None Include="..\shaders\shadow.frag" />
     <None Include="..\shaders\shadow.vert" />
     <None Include="..\shaders\skybox.frag" />

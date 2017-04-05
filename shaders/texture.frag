@@ -6,5 +6,7 @@ uniform sampler2D texture1;
 
 void main()
 {
+	
     outColor = texture(texture1, Texcoord);
+	//outColor = vec4(1.0, 1.0, 1.0, 1.0);
 };
